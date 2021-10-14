@@ -1,0 +1,55 @@
+@import './../../scss/mixins';
+
+.Profile {
+  background: var(--dark-blue);
+  overflow: hidden;
+  border-radius: em(14);
+
+  &__user {
+    background: var(--blue);
+    padding: em(30);
+    display: flex;
+    align-items: center;
+    border-radius: em(14);
+
+    .texts {
+      margin-left: 17px;
+
+      .report {
+        font-weight: 500;
+        font-size: em(15);
+        color: var(--pale-blue);
+        margin-bottom: em(4);
+      }
+
+      .user-name {
+        font-weight: 300;
+        font-size: em(24);
+        color: var(--white);
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 20px 24px 34px;
+
+    .btn {
+      font-size: em(18);
+      color: var(--desaturated-blue);
+    }
+
+    .btn:hover,
+    .btn.active {
+      color: var(--white);
+    }
+  }
+
+  &__image {
+    border: 3px solid white;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+  }
+}
