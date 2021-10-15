@@ -1,6 +1,41 @@
+@import './scss/mixins';
+
 .App {
   margin: 80px 24px;
   font-family: 'Rubik', sans-serif;
+
+  @include breakpoint(sm) {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 100vh;
+  }
+
+  .container {
+    @include breakpoint(sm) {
+      display: grid;
+      padding: em(15);
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: em(15) em(15);
+      grid-template-areas:
+        'profile card card'
+        'profile card card'
+        '. card card';
+    }
+
+    @include breakpoint(lg) {
+      gap: em(30) em(30);
+      padding: em(30);
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        'profile card card card'
+        'profile card card card';
+    }
+  }
 
   p {
     margin: 0;

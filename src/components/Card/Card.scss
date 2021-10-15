@@ -2,11 +2,15 @@
 
 .Card {
   border-radius: em(14);
-  overflow: hidden;
   margin-top: em(24);
   padding-top: em(38);
   background-repeat: no-repeat;
   background-position: 94% -12%;
+
+  @include breakpoint(sm) {
+    padding-top: em(45);
+    margin-top: auto;
+  }
 
   &.work {
     background-color: var(--light-red-work);
@@ -42,10 +46,15 @@
   }
 
   &__information {
-    border-radius: em(14) em(14) 0 0;
+    border-radius: em(14);
     background-color: var(--dark-blue);
     padding: em(28) em(24);
     color: var(--white);
+    cursor: pointer;
+
+    @include breakpoint(sm) {
+      padding: em(29) em(30) em(32) em(30);
+    }
 
     .header {
       display: flex;
@@ -58,6 +67,12 @@
       align-items: center;
       justify-content: space-between;
       margin-top: em(7);
+
+      @include breakpoint(sm) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: em(25);
+      }
     }
 
     .title {
@@ -67,6 +82,15 @@
     .current-time {
       font-size: em(32);
       font-weight: 300;
+
+      @include breakpoint(sm) {
+        font-size: em(48);
+        margin-bottom: em(4);
+      }
+
+      @include breakpoint(xxl) {
+        font-size: em(56);
+      }
     }
 
     .previous-time {
@@ -77,5 +101,9 @@
     .dots {
       font-size: 0;
     }
+  }
+
+  &__information:hover {
+    background-color: var(--hover-blue);
   }
 }

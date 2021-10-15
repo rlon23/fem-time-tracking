@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className='App'>
-      <header className='App-header'>
+      <div className='container'>
         <Profile active={activeTimeframe} onClick={setActiveTimeframe} />
         {data.map((item, index) => {
           return (
@@ -23,7 +23,7 @@ function App() {
             />
           );
         })}
-      </header>
+      </div>
     </div>
   );
 }
