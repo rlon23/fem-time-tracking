@@ -10,7 +10,7 @@ function App() {
   const [activeTimeframe, setActiveTimeframe] = useState('daily');
 
   return (
-    <div className='App'>
+    <main className='App'>
       <div className='container'>
         <Profile active={activeTimeframe} onClick={setActiveTimeframe} />
         {data.map((item, index) => {
@@ -24,7 +24,7 @@ function App() {
           );
         })}
       </div>
-    </div>
+    </main>
   );
 }
 

@@ -11,9 +11,9 @@ function Card({ title, timeframes, active }) {
       <div className='Card__information'>
         <div className='header'>
           <p className='title'>{title}</p>
-          <button className='btn dots'>
+          <span className='dots'>
             <img src={ellipsis} alt='' />
-          </button>
+          </span>
         </div>
         <div className='times'>
           <p className='current-time'>{timeframes[active].current}hrs</p>
